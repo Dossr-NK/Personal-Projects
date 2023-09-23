@@ -6,9 +6,10 @@ import java.awt.event.ActionListener;
 
 public class GameBoard extends JFrame implements ActionListener {
 
-    String let;
+    String let = "X";
     String scoreString;
-    boolean playerturn;
+    boolean playerturn = true;
+    private boolean gameStart = false;
     JFrame frame = new JFrame();
     JFrame frame2 = new JFrame();
     JFrame frame3 = new JFrame();
@@ -30,109 +31,72 @@ public class GameBoard extends JFrame implements ActionListener {
 
     public void StartGame() {
 
-        frame.setTitle("TicTacToe");
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-        frame.setLayout(new BorderLayout());
-        frame.setBackground(new Color(25, 24, 26));
+        if(!gameStart) {
+            frame.setTitle("Tic Tac Toe");
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            frame.setVisible(true);
+            frame.setLayout(new BorderLayout());
+            frame.setBackground(new Color(25, 24, 26));
 
-        JButton enter = new JButton("Enter the game!");
-        enter.setBorder(outsideborder);
-        enter.setFont(new Font("Montserrat", Font.BOLD, 25));
-        enter.setForeground(new Color(209, 232, 226));
-        enter.setBackground(new Color(44, 53, 49));
-        JButton exit = new JButton("Exit the game!");
-        exit.setBorder(outsideborder);
-        exit.setFont(new Font("Montserrat", Font.BOLD, 25));
-        exit.setForeground(new Color(209, 232, 226));
-        exit.setBackground(new Color(44, 53, 49));
-        JPanel welcomeBtScreen = new JPanel();
-        welcomeBtScreen.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(0, 50, 10, 50);
-        welcomeBtScreen.setBackground(new Color(209, 232, 226));
-        welcomeBtScreen.setBorder(outsideborder);
-        welcomeBtScreen.add(enter, gbc);
-        welcomeBtScreen.add(exit, gbc);
+            JButton enter = new JButton("Enter the game!");
+            enter.setBorder(outsideborder);
+            enter.setFont(new Font("Montserrat", Font.BOLD, 25));
+            enter.setForeground(new Color(209, 232, 226));
+            enter.setBackground(new Color(44, 53, 49));
+            JButton exit = new JButton("Exit the game!");
+            exit.setBorder(outsideborder);
+            exit.setFont(new Font("Montserrat", Font.BOLD, 25));
+            exit.setForeground(new Color(209, 232, 226));
+            exit.setBackground(new Color(44, 53, 49));
+            JPanel welcomeBtScreen = new JPanel();
+            welcomeBtScreen.setLayout(new GridBagLayout());
+            GridBagConstraints gbc = new GridBagConstraints();
+            gbc.insets = new Insets(0, 50, 10, 50);
+            welcomeBtScreen.setBackground(new Color(209, 232, 226));
+            welcomeBtScreen.setBorder(outsideborder);
+            welcomeBtScreen.add(enter, gbc);
+            welcomeBtScreen.add(exit, gbc);
 
-        JPanel welcomePanel = new JPanel();
-        JLabel welcome = new JLabel("Welcome To Tic-Tac-Toe!",
-                SwingConstants.CENTER);
-        welcome.setFont(new Font("Montserrat", Font.BOLD, 50));
-        welcome.setForeground(new Color(25, 24, 26));
-        welcome.setBorder(BorderFactory.createEmptyBorder(10, 40, 10, 25));
-        welcomePanel.setBackground(new Color(209, 232, 226));
-        welcomePanel.add(welcome);
+            JPanel welcomePanel = new JPanel();
+            JLabel welcome = new JLabel("Welcome To Tic-Tac-Toe!",
+                    SwingConstants.CENTER);
+            welcome.setFont(new Font("Montserrat", Font.BOLD, 50));
+            welcome.setForeground(new Color(25, 24, 26));
+            welcome.setBorder(BorderFactory.createEmptyBorder(10, 40, 10, 25));
+            welcomePanel.setBackground(new Color(209, 232, 226));
+            welcomePanel.add(welcome);
 
-        JLabel askforplayer = new JLabel("Who is playing first?",
-                SwingConstants.CENTER);
-        askforplayer.setBackground(new Color(209, 232, 226));
-        askforplayer.setForeground(new Color(25, 24, 26));
-        askforplayer.setFont(new Font("Montserrat", Font.BOLD, 30));
-        JTextField firstturn = new JTextField();
-        firstturn.setSize(150, 20);
-        firstturn.setFont(mainFont);
-        JPanel firstplayerpanel = new JPanel();
-        GridBagConstraints c = new GridBagConstraints();
-        firstplayerpanel.setLayout(new GridBagLayout());
-        c.weightx = 0.5;
-        c.gridx = 1;
-        c.gridy = 0;
-        firstplayerpanel.add(askforplayer, c);
-        c.ipady = 20;
-        c.weightx = 0.0;
-        c.gridwidth = 3;
-        c.gridx = 0;
-        c.gridy = 1;
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.insets = new Insets(15, 50, 15, 50);
-        firstplayerpanel.add(firstturn, c);
-        firstplayerpanel.setBackground(new Color(209, 232, 226));
-
-        enter.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String temp = firstturn.getText();
-                if (temp.equals("x")) {
-                    let = temp.toUpperCase();
-                    if (let.equals("X")) {
-                        playerturn = true;
-                    }
-                } else if (temp.equals("o")) {
-                    let = temp.toUpperCase();
-                    if (let.equals("O")) {
-                        playerturn = false;
-                    }
-                } else {
-                    let = temp;
-                    if (let.equals("X")) {
-                        playerturn = true;
-                    }
+            enter.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    frame.setVisible(false);
+                    frame.dispose();
+                    frame2.setVisible(true);
                 }
-                turns = 0;
-                frame.dispose();
-                frame2.setVisible(true);
-            }
-        });
+            });
 
-        exit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
+            exit.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    System.exit(0);
+                }
+            });
 
-        frame.add(welcomePanel, BorderLayout.NORTH);
-        frame.add(firstplayerpanel, BorderLayout.CENTER);
-        frame.add(welcomeBtScreen, BorderLayout.SOUTH);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
+            frame.add(welcomePanel, BorderLayout.NORTH);
+            frame.add(welcomeBtScreen, BorderLayout.SOUTH);
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+        }
+
+        gameStart = true;
+
     }
 
     public GameBoard() {
 
-        frame2.setVisible(false);
-        StartGame();
+        if(!gameStart) {
+            StartGame();
+        }
 
         turn.setFont(smallerFont);
         turn.setForeground(new Color(209, 232, 226));
@@ -282,4 +246,8 @@ public class GameBoard extends JFrame implements ActionListener {
         frame3.pack();
         frame3.setLocationRelativeTo(null);
     }
+    public static void main(String[] args) {
+        new GameBoard();
+    }
+    
 }
