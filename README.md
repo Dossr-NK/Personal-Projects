@@ -1,32 +1,26 @@
 # Personal Projects
 
-This repository is a list of all the personal projects I have done and are separated into the main language I used to create them. Along with that, the projects are listed below into projects that I have done in 1 day, 1 week, 1 month, and more than 1 month with their corresponding main language listed right next to it. It also includes any learning I have done from YouTube videos or elsewhere.
+This repository is a list of all the small to medium sized personal projects I have done and are separated into the main language I used to create them. This main repository is meant to store all the projects I have done that are on the smaller side or are basic ideas taken from the internet while also directing people to my other bigger projects (that are yet to be made). It also includes any learning I have done from YouTube videos or elsewhere.
 
 - [Personal Projects](#personal-projects)
-  - [1 Day Projects](#1-day-projects)
-  - [1 Week Projects](#1-week-projects)
-  - [1 Month Projects](#1-month-projects)
-  - [More than 1 Month Projects](#more-than-1-month-projects)
+  - [Project List](#projects-list)
+    - [Java](#java)
   - [Learning](#learning)
+  - [Contributing](#contributing)
 
 ### Additional Note
 Before I made this repository, I didn't keep track of my projects (mainly just the first 2 java projects: [Calculator w/o a GUI](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Calculator%20no%20GUI) and [Tic Tac Toe](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Tic%20Tac%20Toe)) so there are no dates listed for these projects. After these projects, I will have dates for when I created them.
 
-## 1 Day Projects
+## Projects List
+### Java
+  - [Calculator w/o a GUI](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Calculator%20no%20GUI)
+  - [Tic Tac Toe](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Tic%20Tac%20Toe)
 
-- [Calculator w/o a GUI](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Calculator%20no%20GUI) (Java)
-
-## 1 Week Projects
-
-
-## 1 Month Projects
-
-
-## More than 1 Month Projects
-
-- [Tic Tac Toe](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Tic%20Tac%20Toe) (Java)
+<!-- Will add ## Larger Projects List later when I create one. -->
 
 ## Learning
 
 - [Learning C](https://github.com/Dossr-NK/Personal-Projects/tree/main/C/Learning%20C) (C)
 
+## Contributing
+Although all of these projects will be on the smaller side, I still tend to make mistakes, miss things, or unknowningly(or knowingly) make bugs throughout my projects. Any help would be greate in either creating an issue if you find a bug or creating a pull request to fix a bug. 
