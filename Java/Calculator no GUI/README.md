@@ -4,7 +4,10 @@ Command Line Based Calculator is a simple calculator project I built a while bac
 ## Images
 
 ### First Run
-![First Run]
+![First Run](https://github.com/Dossr-NK/Personal-Projects/blob/main/Java/Calculator%20no%20GUI/Pictures/First%20Run.png)
+
+### Example Usage
+![Example usage](https://github.com/Dossr-NK/Personal-Projects/blob/main/Java/Calculator%20no%20GUI/Pictures/Example%20Usage.png)
 
 ## Getting Started
 ### Prerequisites
