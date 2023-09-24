@@ -23,8 +23,8 @@ Before I made this repository, I didn't keep track of my projects (mainly just t
 - [Learning C](https://github.com/Dossr-NK/Personal-Projects/tree/main/C/Learning%20C) (C)
 
 ## Contributing
-Although all of these projects will be on the smaller side, I still tend to make mistakes, miss things, or unknowningly(or knowingly) make bugs throughout my projects. Any help would be greate in either creating an issue if you find a bug or creating a pull request to fix a bug. 
+Although all of these projects will be on the smaller side, I still tend to make mistakes, miss things, or unknowningly(or knowingly) make bugs throughout my projects. Any help would be greate in either creating an issue if you find a bug or creating a pull request to fix a bug. The process of contributing are written under each project, although they are all the same or pretty similar. 
 
 
 ## License
-All of the projects on this list are licensed under the [MIT License](https://github.com/Dossr-NK/Personal-Projects/blob/main/LICENSE.txt)
+All of the projects on this list are licensed under the [MIT License](https://github.com/Dossr-NK/Personal-Projects/blob/main/LICENSE.txt).
