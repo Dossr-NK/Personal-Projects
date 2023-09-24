@@ -18,7 +18,7 @@ Command Line Based Calculator is a simple calculator project I built a while bac
 Firstly, clone the main "Personal Projects" repository and cd to the following directory:
 ```bash
 git clone https://github.com/yourusername/Personal-Projects.git
-cd ../Personal-Projects/Java/"Tic Tac Toe"/src
+cd ../Personal-Projects/Java/"Calculator no GUI"/src
 ```
  
 ### Running the game
