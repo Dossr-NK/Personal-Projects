@@ -7,7 +7,9 @@ project(Bank_Management_System_App VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(Bank_Management_System_App ./src/main.c)
+FILE(GLOB SOURCES "./src/*.c")
+
+add_executable(bank_app ${SOURCES})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Bank_Management_System_App.exe"
+			"path" : "bank_app.exe"
 		},
 		{
-			"path" : "Bank_Management_System_App.pdb"
+			"path" : "bank_app.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 10,
+				"line" : 12,
 				"parent" : 0
 			}
 		]
@@ -52,11 +52,13 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
-	"id" : "Bank_Management_System_App::@6890427a1f51a3e7e1df",
+	"id" : "bank_app::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +78,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "Bank_Management_System_App",
-	"nameOnDisk" : "Bank_Management_System_App.exe",
+	"name" : "bank_app",
+	"nameOnDisk" : "bank_app.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -89,7 +91,9 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
@@ -99,6 +103,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/main.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/transaction_management.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/user_management.c",
 			"sourceGroupIndex" : 0
 		}
 	],

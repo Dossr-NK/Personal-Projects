@@ -26,7 +26,7 @@ C:/Users/natha/Desktop/Personal-Projects/C/Bank Management System App/build/CMak
 C:/Users/natha/Desktop/Personal-Projects/C/Bank Management System App/build/CMakeFiles/ContinuousCoverage.dir
 C:/Users/natha/Desktop/Personal-Projects/C/Bank Management System App/build/CMakeFiles/ContinuousMemCheck.dir
 C:/Users/natha/Desktop/Personal-Projects/C/Bank Management System App/build/CMakeFiles/ContinuousSubmit.dir
-C:/Users/natha/Desktop/Personal-Projects/C/Bank Management System App/build/CMakeFiles/Bank_Management_System_App.dir
+C:/Users/natha/Desktop/Personal-Projects/C/Bank Management System App/build/CMakeFiles/bank_app.dir
 C:/Users/natha/Desktop/Personal-Projects/C/Bank Management System App/build/CMakeFiles/package.dir
 C:/Users/natha/Desktop/Personal-Projects/C/Bank Management System App/build/CMakeFiles/package_source.dir
 C:/Users/natha/Desktop/Personal-Projects/C/Bank Management System App/build/CMakeFiles/test.dir

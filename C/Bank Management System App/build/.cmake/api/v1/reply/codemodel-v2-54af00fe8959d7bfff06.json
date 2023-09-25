@@ -94,13 +94,6 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Bank_Management_System_App::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Bank_Management_System_App-Debug-9df103f8c4cc51c5a843.json",
-					"name" : "Bank_Management_System_App",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "Continuous::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Continuous-Debug-cde0a27216379aa1ca90.json",
 					"name" : "Continuous",
@@ -293,6 +286,13 @@
 					"id" : "NightlyUpdate::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-NightlyUpdate-Debug-f3cebe49ceb6f0fd4e7b.json",
 					"name" : "NightlyUpdate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bank_app::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bank_app-Debug-ba79c22257ade8717de7.json",
+					"name" : "bank_app",
 					"projectIndex" : 0
 				}
 			]
