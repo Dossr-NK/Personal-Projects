@@ -15,7 +15,8 @@ Before I made this repository, I didn't keep track of my projects (mainly just t
 ### Java
   - [Calculator w/o a GUI](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Calculator%20no%20GUI)
   - [Tic Tac Toe](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Tic%20Tac%20Toe)
-
+### C
+  - [Bank Management System App](https://github.com/Dossr-NK/Personal-Projects/tree/main/C/Bank%20Management%20System%20App) (9/24/2023 - present)
 <!-- Will add ## Larger Projects List later when I create one. -->
 
 ## Learning
