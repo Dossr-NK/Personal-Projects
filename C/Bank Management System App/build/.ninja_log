@@ -1,6 +1,0 @@
-# ninja log v5
-7	53	7173249739892976	CMakeFiles/Bank_Management_System_App.dir/src/main.c.obj	5074315a5822542f
-4	43	7173273211006049	CMakeFiles/bank_app.dir/src/transaction_management.c.obj	953331ec20b1c61
-5	61	7173279888636477	CMakeFiles/bank_app.dir/src/user_management.c.obj	55ea24ccbbbec004
-2	49	7173279888521313	CMakeFiles/bank_app.dir/src/main.c.obj	b1c1f8ef59d5e836
-61	121	7173279889225771	bank_app.exe	d8037fca3a16be3b
