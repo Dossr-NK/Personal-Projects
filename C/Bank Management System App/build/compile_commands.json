@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/natha/Desktop/Personal-Projects/C/Bank Management System App/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -g -std=gnu11 -o CMakeFiles\\Bank_Management_System_App.dir\\src\\main.c.obj -c \"C:\\Users\\natha\\Desktop\\Personal-Projects\\C\\Bank Management System App\\src\\main.c\"",
+  "file": "C:\\Users\\natha\\Desktop\\Personal-Projects\\C\\Bank Management System App\\src\\main.c",
+  "output": "CMakeFiles\\Bank_Management_System_App.dir\\src\\main.c.obj"
+}
+]
