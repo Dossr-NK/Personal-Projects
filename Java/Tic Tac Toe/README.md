@@ -26,7 +26,7 @@ There is a known bug at the start of each game where a new Welcome Screen pops u
 ## Getting Started
 ### Prerequisites
 - Java JRE 1.8
-- Java JDK 21 (optional)
+- Java JDK 21
 
 ### Clone the Repository
 First clone the repository and navigate to the source files for the Tic Tac Toe game.
