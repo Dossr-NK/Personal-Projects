@@ -13,11 +13,25 @@ int main(int argc, char **argv){
     strcpy(user.name, "test");
     user.age = 18;
     
-    bool isUserLoggedIn = Login(&user);
-    if(isUserLoggedIn){
+    Login(&user);
+    bool changePasswordTest = ChangePassword(&user);
+    bool changeUsernameTest = ChangeUsername(&user);
+    if(user.isLoggedIn){
         printf("User is logged in!\n");
     } else {
         printf("User is not logged in!\n");
+    }
+
+    if(changePasswordTest) {
+        printf("Password changed\n");
+    } else {
+        printf("Password change failed\n");
+    }
+
+    if(changeUsernameTest) {
+        printf("Username changed");
+    } else {
+        printf("Username change failed");
     }
 
     return 0;

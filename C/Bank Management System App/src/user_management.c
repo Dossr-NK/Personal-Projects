@@ -8,7 +8,7 @@ Login function is used to authenticate and login the user into the system.
 Input: Pointer to the user object
 Output: Boolean value indicating if the user is logged in or not
 */
-bool Login(User *user){
+void Login(User *user){
     if(!user->isRegistered){
         printf("You are unregistered, please register first!\n");
         Register(user);
@@ -41,9 +41,11 @@ bool Login(User *user){
 
     if(!isUserLoggedIn){
         printf("You have exceeded the maximum number of login attempts!\n");
-        return false;
+        user->isLoggedIn = false;
+    } else {
+        user->isLoggedIn = true;
     }
-    return true;
+
 }
 
 /*
@@ -103,10 +105,13 @@ bool ChangePassword(User *user) {
         scanf("%s", tempPassword);
     
         if(strcmp(tempPassword, user->password) != 0) {
-            printf("Incorrect password, please try again.");
+            printf("Incorrect password, please try again.\n");
             changeAttempts++;
         } else {
-            strcpy(user->password, tempPassword);
+            password newPassword;
+            printf("Enter new password: ");
+            scanf("%s", newPassword);
+            strcpy(user->username, newPassword);
             printf("Password change successful!\n");
             break;
         }
@@ -139,11 +144,14 @@ bool ChangeUsername(User *user) {
         scanf("%s", tempUsername);
     
         if(strcmp(tempUsername, user->username) != 0) {
-            printf("Incorrect username, please try again.");
+            printf("Incorrect username, please try again.\n");
             changeAttempts++;
         } else {
-            strcpy(user->username, tempUsername);
-            printf("Username change successful!\n");
+            username newUsername;
+            printf("Enter new username: ");
+            scanf("%s", newUsername);
+            strcpy(user->username, newUsername);
+            printf("Username change successful! Your new username is %s.\n", newUsername);
             break;
         }
 

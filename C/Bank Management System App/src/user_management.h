@@ -17,10 +17,11 @@ typedef struct {
     password password;
     name name;
     unsigned int age;
+    bool isLoggedIn;
     bool isAccompaniedByAdult;
 } User;
 
-bool Login(User *user);
+void Login(User *user);
 void Register(User *user);
 bool ChangePassword(User *user);
 bool ChangeUsername(User *user);
