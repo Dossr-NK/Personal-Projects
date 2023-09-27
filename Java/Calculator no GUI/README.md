@@ -12,7 +12,7 @@ Command Line Based Calculator is a simple calculator project I built a while bac
 ## Getting Started
 ### Prerequisites
 - Java JRE 1.8
-- Java JDK 21 (optional)
+- Java JDK 21
 
 ### Clone the Repository
 Firstly, clone the main "Personal Projects" repository and cd to the following directory:
