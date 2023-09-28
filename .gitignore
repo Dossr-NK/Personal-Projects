@@ -1,4 +1,8 @@
 build/
+bazel-bin/
+bazel-converter/
+bazel-out/
+bazel-testlogs/
 CMakeCache.txt
 CMakeFiles/
 Makefile
