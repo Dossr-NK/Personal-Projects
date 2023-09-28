@@ -4,7 +4,8 @@
 #include "user_management.h"
 
 int main(int argc, char **argv){
-    printf("Hello, from Bank Management System App!\n");
+    printf("\n\nHello to the Bank Management System App!\n");
+    printf("----------------------------------------\n\n\n");
     
     User user;
     user.isRegistered = true;

@@ -10,7 +10,7 @@ Output: Boolean value indicating if the user is logged in or not
 */
 void Login(User *user){
     if(!user->isRegistered){
-        printf("You are unregistered, please register first!\n");
+        printf("\nYou are unregistered, please register first!\n");
         Register(user);
     }
 
@@ -22,7 +22,7 @@ void Login(User *user){
 
     do {
 
-        printf("Please login before accessing your bank data!\n");
+        printf("\nPlease login before accessing your bank data!\n");
         printf("Enter username: ");
         scanf("%s", tempUsername);
         printf("Enter password: ");
@@ -30,10 +30,10 @@ void Login(User *user){
 
         // Check if the username and password are correct
         if(strcmp(user->username, tempUsername) == 0 && strcmp(user->password, tempPassword) == 0){
-            printf("Login successful!\n");
+            printf("Login successful!\n\n");
             isUserLoggedIn = true;
         } else {
-            printf("Login failed!\n");
+            printf("Login failed!\n\n\n");
             loginAttempts++;
         }
 
@@ -54,7 +54,8 @@ Input: Pointer to the user object
 Output: Boolean value indicating if the user is registered or not
 */
 void Register(User *user) {
-    printf("Please register before accessing your bank data!\n");
+    printf("\n------------------------------------------------\n");
+    printf("\nPlease register before accessing your bank data!\n");
     printf("Firstly, what is your age?");
     scanf("%d", &user->age);
 
@@ -85,6 +86,56 @@ void Register(User *user) {
     user->isRegistered = true;
 
     printf("Registration successful!\n");
+}
+
+void UserManagement(User *user) {
+
+    do{
+        printf("\n\n--------------------------------------\n");
+        printf("Welcome to the user management system!\n");
+        printf("What would you like to do?\n");
+        printf("1. Manage your bank accounts\n");
+        printf("2. Change password\n");
+        printf("3. Change username\n");
+        printf("4. Logout\n");
+
+        int choice;
+        scanf("%d", &choice);
+
+        switch(choice){
+            case 1:
+                UserAccessBankAccount(&user);
+            case 2:
+                ChangePassword(&user);
+            case 3:
+                ChangeUsername(&user);
+            case 4:
+                Logout(&user);
+            default:
+                printf("Invalid choice!\n");
+                break;
+        }
+    } while(user->isLoggedIn);
+}
+
+/*
+ * UserAccessBankAccount function is used to allow the user to access any of their bank accounts.
+ * Input: Pointer to the user object.
+ * Output: None.
+ */
+void UserAccessBankAccount(User *user) {
+
+}
+
+/*
+ * Logout function is used to logout the user from the system.
+ * Input: Pointer to the user object.
+ * Output: None.
+ */
+void Logout(User *user) {
+    user->isLoggedIn = false;
+    printf("You have been logged out! The program will now exit.\n");
+    exit(0);
 }
 
 /*
