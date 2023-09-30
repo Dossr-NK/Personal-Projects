@@ -1,6 +1,7 @@
 #include "user_management.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 /*
@@ -104,13 +105,13 @@ void UserManagement(User *user) {
 
         switch(choice){
             case 1:
-                UserAccessBankAccount(&user);
+                UserAccessBankAccount(user);
             case 2:
-                ChangePassword(&user);
+                ChangePassword(user);
             case 3:
-                ChangeUsername(&user);
+                ChangeUsername(user);
             case 4:
-                Logout(&user);
+                Logout(user);
             default:
                 printf("Invalid choice!\n");
                 break;
@@ -124,7 +125,55 @@ void UserManagement(User *user) {
  * Output: None.
  */
 void UserAccessBankAccount(User *user) {
+    printf("You have %d bank accounts.\n", user->numberOfBankAccounts);
+    printf("Which bank account would you like to access?\n");
+    printf("Enter the name of the bank where your account is: ");
 
+    char bankAccountName[20];
+    scanf("%s", &bankAccountName);
+
+    BankAccount bankAccount;
+    for(int i = 0; i < user->numberOfBankAccounts; i++) {
+        if(strcmp(user->bankAccounts[i].bankName, bankAccountName) == 0) {
+            bankAccount = *(&user->bankAccounts[i]);
+        }
+    }
+
+    printf("Currently accessing bank account at %s.\n", bankAccount.bankName);
+    printf("AccountID: %d\n", bankAccount.accountID);
+    printf("Credit score: %d\n", bankAccount.creditScore);
+    printf("Here is a list of your cards:\n");
+
+    for(int i = 0; i < bankAccount.numberOfCards; i++) {
+        CardData cardData = bankAccount.cards[i];
+        printf("Card %d:\n", i + 1);
+        printf("Type: %c\n", cardData.type);
+        printf("Balance: %d\n", cardData.bankAccountData.balance);
+        printf("Credit debt: %d\n", cardData.bankAccountData.creditDebt);
+    }
+
+    printf("What would you like to do?\n");
+    printf("1. Manage your Bank Account\n");
+    printf("2. Manage each card\n");
+    printf("3. Logout\n");
+
+    int choice;
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            UserBankAccountManagement(&bankAccount);
+            break;
+        case 2:
+            UserBankAccountDataManagement(&bankAccount);
+            break;
+        case 3:
+            Logout(user);
+            break;
+        default:
+            printf("Invalid choice!\n");
+            break;
+    }
 }
 
 /*
