@@ -7,7 +7,7 @@
 /*
 Login function is used to authenticate and login the user into the system.
 Input: Pointer to the user object
-Output: Boolean value indicating if the user is logged in or not
+Output: None
 */
 void Login(User *user){
     if(!user->isRegistered){

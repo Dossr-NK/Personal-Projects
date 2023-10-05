@@ -19,7 +19,9 @@ typedef struct {
     CardData *cards; // User can have more than 1 card so the array size isn't initialized here
 } BankAccount;
 
+void CreateNewCard(BankAccount *bankAccount);
+void DeleteCard(BankAccount *bankAccount);
+void AccessCardData(CardData *cardData);
 void UserBankAccountManagement(BankAccount *bankAccount);
-void UserBankAccountDataManagement(BankAccountData *bankAccountData);
 
 #endif // _account_management_h_
