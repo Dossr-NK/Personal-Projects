@@ -2,21 +2,17 @@
 #define _account_management_h_
 
 typedef struct {
+    char type; // Either 'D' for debit or 'C' for credit
     int balance;
     int creditDebt; // Optional value if the CardData holds 'C'
-} BankAccountData;
-
-typedef struct {
-    char type; // Either 'D' for debit or 'C' for credit
-    BankAccountData bankAccountData;
 } CardData;
 
 typedef struct {
     int accountID; // A bank and user specific ID
     char bankName[20];
     short creditScore; // Score of 0 - 850
-    int numberOfCards; // Number to hold the number of cards the user has for initializing the array
-    CardData *cards; // User can have more than 1 card so the array size isn't initialized here
+    // int numberOfCards; Initially a number to allow for dynamic allocation of the cards array, however, cause too much issues so it was removed
+    CardData cards[5]; // User can have up to 5 cards
 } BankAccount;
 
 void CreateNewCard(BankAccount *bankAccount);

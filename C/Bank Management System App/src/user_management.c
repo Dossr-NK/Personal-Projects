@@ -125,7 +125,7 @@ void UserManagement(User *user) {
  * Output: None.
  */
 void UserAccessBankAccount(User *user) {
-    printf("You have %d bank accounts.\n", user->numberOfBankAccounts);
+    printf("You have %d bank accounts.\n", sizeof(user->bankAccounts));
     printf("Which bank account would you like to access?\n");
     printf("Enter the name of the bank where your account is: ");
 
@@ -133,7 +133,7 @@ void UserAccessBankAccount(User *user) {
     scanf("%s", &bankAccountName);
 
     BankAccount bankAccount;
-    for(int i = 0; i < user->numberOfBankAccounts; i++) {
+    for(int i = 0; i < sizeof(user->bankAccounts); i++) {
         if(strcmp(user->bankAccounts[i].bankName, bankAccountName) == 0) {
             bankAccount = *(&user->bankAccounts[i]);
         }
@@ -144,12 +144,10 @@ void UserAccessBankAccount(User *user) {
     printf("Credit score: %d\n", bankAccount.creditScore);
     printf("Here is a list of your cards:\n");
 
-    for(int i = 0; i < bankAccount.numberOfCards; i++) {
+    for(int i = 0; i < sizeof(bankAccount); i++) {
         CardData cardData = bankAccount.cards[i];
         printf("Card %d:\n", i + 1);
         printf("Type: %c\n", cardData.type);
-        printf("Balance: %d\n", cardData.bankAccountData.balance);
-        printf("Credit debt: %d\n", cardData.bankAccountData.creditDebt);
     }
 
     printf("What would you like to do?\n");
@@ -165,7 +163,7 @@ void UserAccessBankAccount(User *user) {
             UserBankAccountManagement(&bankAccount);
             break;
         case 2:
-            UserBankAccountDataManagement(&bankAccount);
+            UserBankAccountManagement(&bankAccount);
             break;
         case 3:
             Logout(user);

@@ -20,8 +20,8 @@ typedef struct {
     unsigned int age;
     bool isLoggedIn;
     bool isAccompaniedByAdult;
-    int numberOfBankAccounts; // Number to hold the number of bank accounts the user has for initializing the array
-    BankAccount *bankAccounts; // This holds the bank accounts of the user for various banks 
+    // int numberOfBankAccounts; Initially a number to allow for dynamic allocation of the bankAccounts array, however, cause too much issues so it was removed
+    BankAccount bankAccounts[3]; // User can have up to 3 bank accounts
 } User;
 
 void Login(User *user);

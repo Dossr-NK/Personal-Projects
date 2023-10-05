@@ -1,5 +1,7 @@
 #include "account_management.h"
 
+#include <stdio.h>
+
 /*
  * CreateNewCard is a function to create a new card for the user.
  * Input: bankAccount is a pointer to the bank account of the user
@@ -28,7 +30,7 @@ void AccessCardData(CardData *cardData) {
  * Output: None   
  */
 void UserBankAccountManagement(BankAccount *bankAccount) {
-    printf("You have %d cards.\n", bankAccount->numberOfCards);
+    printf("You have %d cards.\n", sizeof(bankAccount->cards));
     printf("What would you like to do?\n");
     printf("1. Create a new card\n");
     printf("2. Delete a card\n");
