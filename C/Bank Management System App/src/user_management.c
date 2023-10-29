@@ -4,22 +4,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
-Login function is used to authenticate and login the user into the system.
-Input: Pointer to the user object
-Output: None
-*/
 void Login(User *user){
     if(!user->isRegistered){
         printf("\nYou are unregistered, please register first!\n");
         Register(user);
     }
-
     // Create temporary variables to check if the username and password are correct
     username tempUsername;
     password tempPassword;
     bool isUserLoggedIn = false;
-    short loginAttempts = 0;
+    short loginAttempts = 1;
 
     do {
 
@@ -31,10 +25,11 @@ void Login(User *user){
 
         // Check if the username and password are correct
         if(strcmp(user->username, tempUsername) == 0 && strcmp(user->password, tempPassword) == 0){
-            printf("Login successful!\n\n");
+            printf("Login successful!\n");
             isUserLoggedIn = true;
         } else {
-            printf("Login failed!\n\n\n");
+            printf("Login failed!\n");
+            printf("----------------------------------------\n");
             loginAttempts++;
         }
 
@@ -45,15 +40,11 @@ void Login(User *user){
         user->isLoggedIn = false;
     } else {
         user->isLoggedIn = true;
+        UserManagement(user);
     }
 
 }
 
-/*
-Register function is used to register the user into the system if they aren't already.
-Input: Pointer to the user object
-Output: Boolean value indicating if the user is registered or not
-*/
 void Register(User *user) {
     printf("\n------------------------------------------------\n");
     printf("\nPlease register before accessing your bank data!\n");
@@ -92,26 +83,30 @@ void Register(User *user) {
 void UserManagement(User *user) {
 
     do{
-        printf("\n\n--------------------------------------\n");
+        printf("\n--------------------------------------\n");
         printf("Welcome to the user management system!\n");
         printf("What would you like to do?\n");
         printf("1. Manage your bank accounts\n");
         printf("2. Change password\n");
         printf("3. Change username\n");
         printf("4. Logout\n");
-
+        printf("Enter your choice: ");
         int choice;
         scanf("%d", &choice);
 
         switch(choice){
             case 1:
                 UserAccessBankAccount(user);
+                break;
             case 2:
                 ChangePassword(user);
+                break;
             case 3:
                 ChangeUsername(user);
+                break;
             case 4:
                 Logout(user);
+                break;
             default:
                 printf("Invalid choice!\n");
                 break;
@@ -119,13 +114,12 @@ void UserManagement(User *user) {
     } while(user->isLoggedIn);
 }
 
-/*
- * UserAccessBankAccount function is used to allow the user to access any of their bank accounts.
- * Input: Pointer to the user object.
- * Output: None.
- */
 void UserAccessBankAccount(User *user) {
-    printf("You have %d bank accounts.\n", sizeof(user->bankAccounts));
+    printf("\n--------------------------------------\n");
+    printf("You have %d bank accounts.\n", sizeof(user->bankAccounts)/sizeof(user->bankAccounts[0]));
+    for(int i = 0; i < sizeof(user->bankAccounts)/sizeof(user->bankAccounts[0]); i++) {
+        printf("Bank account %d's name: %s\n", i + 1, user->bankAccounts[i].bankName);
+    }
     printf("Which bank account would you like to access?\n");
     printf("Enter the name of the bank where your account is: ");
 
@@ -133,68 +127,62 @@ void UserAccessBankAccount(User *user) {
     scanf("%s", &bankAccountName);
 
     BankAccount bankAccount;
-    for(int i = 0; i < sizeof(user->bankAccounts); i++) {
+    for(int i = 0; i < sizeof(user->bankAccounts)/sizeof(user->bankAccounts[0]); i++) {
         if(strcmp(user->bankAccounts[i].bankName, bankAccountName) == 0) {
-            bankAccount = *(&user->bankAccounts[i]);
+            bankAccount = user->bankAccounts[i];
         }
     }
 
+    printf("\n--------------------------------------\n");
     printf("Currently accessing bank account at %s.\n", bankAccount.bankName);
     printf("AccountID: %d\n", bankAccount.accountID);
     printf("Credit score: %d\n", bankAccount.creditScore);
-    printf("Here is a list of your cards:\n");
+    printf("Savings account balance: %d\n", bankAccount.savingsAccountBalance);
+    printf("Here is a list of your cards:\n\n");
 
-    for(int i = 0; i < sizeof(bankAccount); i++) {
+    for(int i = 0; i < sizeof(bankAccount.cards)/sizeof(bankAccount.cards[0]); i++) {
         CardData cardData = bankAccount.cards[i];
         printf("Card %d:\n", i + 1);
         printf("Type: %c\n", cardData.type);
+        printf("Balance: %d\n", cardData.balance);
+        printf("Credit debt: %d\n\n", cardData.creditDebt);
     }
 
-    printf("What would you like to do?\n");
-    printf("1. Manage your Bank Account\n");
-    printf("2. Manage each card\n");
-    printf("3. Logout\n");
+    do{
+        printf("What would you like to do?\n");
+        printf("1. Manage your Bank Account\n");
+        printf("2. Logout\n");
+        printf("Enter your choice: ");
 
-    int choice;
-    scanf("%d", &choice);
+        int choice;
+        scanf("%d", &choice);
 
-    switch(choice) {
-        case 1:
-            UserBankAccountManagement(&bankAccount);
-            break;
-        case 2:
-            UserBankAccountManagement(&bankAccount);
-            break;
-        case 3:
-            Logout(user);
-            break;
-        default:
-            printf("Invalid choice!\n");
-            break;
-    }
+        switch(choice) {
+            case 1:
+                UserBankAccountManagement(&bankAccount);
+                break;
+            case 2:
+                Logout(user);
+                break;
+            default:
+                printf("Invalid choice!\n");
+                break;
+        }
+    } while(user->isLoggedIn);
 }
 
-/*
- * Logout function is used to logout the user from the system.
- * Input: Pointer to the user object.
- * Output: None.
- */
 void Logout(User *user) {
     user->isLoggedIn = false;
     printf("You have been logged out! The program will now exit.\n");
     exit(0);
 }
 
-/*
-ChangePassword function is used to allow the user to change the password of their login information if they wanted to.
-Input: Pointer to the user object.
-Output: Boolean value of whether the change for password was successful.
-*/
 bool ChangePassword(User *user) {
 
     password tempPassword;
     short changeAttempts = 0;
 
+    printf("\n--------------------------------------\n");
     printf("You will now be changing your password.\n");
     
     do {
@@ -209,7 +197,7 @@ bool ChangePassword(User *user) {
             password newPassword;
             printf("Enter new password: ");
             scanf("%s", newPassword);
-            strcpy(user->username, newPassword);
+            strcpy(user->password, newPassword);
             printf("Password change successful!\n");
             break;
         }
@@ -217,23 +205,19 @@ bool ChangePassword(User *user) {
     } while(changeAttempts < MAX_PASSWORD_CHANGE_ATTEMPTS);
 
     if(changeAttempts == MAX_PASSWORD_CHANGE_ATTEMPTS) {
-        printf("You have run out of password change attempts, please try again later.");
+        printf("You have run out of password change attempts, please try again later\n");
         return false;
     }
 
     return true;
 }
 
-/*
-ChangeUsername function is used to allow the user to change the username of their login information if they wanted to.
-Input: Pointer to the user object.
-Output: Boolean value of whether the change for username was successful.
-*/
 bool ChangeUsername(User *user) {
 
     username tempUsername;
     short changeAttempts = 0;
 
+    printf("\n--------------------------------------\n");
     printf("You will now be changing your username.\n");
     
     do {
@@ -256,9 +240,42 @@ bool ChangeUsername(User *user) {
     } while(changeAttempts < MAX_USERNAME_CHANGE_ATTEMPTS);
 
     if(changeAttempts == MAX_USERNAME_CHANGE_ATTEMPTS) {
-        printf("You have run out of username change attempts, please try again later.");
+        printf("You have run out of username change attempts, please try again later.\n");
         return false;
     }
 
     return true;
+}
+
+User InitializeDefaultUser() {
+    // Define default user
+    User default_user = {
+        .isRegistered = false,
+        .age = 0,
+        .isLoggedIn = false,
+        .isAccompaniedByAdult = false,
+    };
+    
+    // Copy default values to strings
+    strcpy(default_user.username, "");
+    strcpy(default_user.password, "");
+    strcpy(default_user.name, "");
+    
+    // Initialize bank accounts
+    for (int i = 0; i < 3; i++) {
+        default_user.bankAccounts[i].isValid = false;
+        default_user.bankAccounts[i].accountID = 0;
+        strcpy(default_user.bankAccounts[i].bankName, "");
+        default_user.bankAccounts[i].creditScore = 0;
+        default_user.bankAccounts[i].savingsAccountBalance = 0;
+        
+        for (int j = 0; j < 5; j++) {
+            default_user.bankAccounts[i].cards[j].isValid = false;
+            default_user.bankAccounts[i].cards[j].type = 'D';
+            default_user.bankAccounts[i].cards[j].balance = 0;
+            default_user.bankAccounts[i].cards[j].creditDebt = 0;
+        }
+    }
+
+    return default_user;
 }

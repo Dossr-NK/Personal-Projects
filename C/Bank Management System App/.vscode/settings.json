@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "account_management.h": "c",
+        "user_management.h": "c"
+    }
+}

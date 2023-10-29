@@ -1,0 +1,214 @@
+Test Data written in test_data.txt
+    User:
+        isRegistered = true
+        username = "test"
+        password = "test"
+        name = "test"
+        age = 18
+        isAccompaniedByAdult = true
+        isLoggedIn = false
+        bankAccounts:
+            bankAccount1:
+                isValid = true
+                accountID = 1
+                bankName = "Chase"
+                creditScore = 750
+                savingsAccountBalance = 30000
+                cards:
+                    card1:
+                        isValid = true
+                        type = 'D'
+                        balance = 1000
+                        creditDebt = 0
+                    card2:
+                        isValid = true
+                        type = 'C'
+                        balance = 2000
+                        creditDebt = 300
+                    card3:
+                        isValid = true
+                        type = 'C'
+                        balance = 3000
+                        creditDebt = 500
+                    card4:
+                        isValid = true
+                        type = 'D'
+                        balance = 4000
+                        creditDebt = 0
+                    card5:
+                        isValid = true
+                        type = 'C'
+                        balance = 5000
+                        creditDebt = 1000
+            bankAccount2:
+                isValid = true
+                accountID = 2
+                bankName = "Bank of America"
+                creditScore = 800
+                savingsAccountBalance = 100000
+                cards:
+                    card1:
+                        isValid = true
+                        type = 'D'
+                        balance = 1000
+                        creditDebt = 0
+                    card2:
+                        isValid = true
+                        type = 'C'
+                        balance = 2000
+                        creditDebt = 300
+                    card3:
+                        isValid = true
+                        type = 'C'
+                        balance = 3000
+                        creditDebt = 500
+                    card4:
+                        isValid = true
+                        type = 'D'
+                        balance = 4000
+                        creditDebt = 0
+                    card5:
+                        isValid = true
+                        type = 'C'
+                        balance = 5000
+                        creditDebt = 1000
+            bankAccount3:
+                isValid = true
+                accountID = 3
+                bankName = "JP Morgan"
+                creditScore = 800
+                savingsAccountBalance = 20000
+                cards:
+                    card1:
+                        isValid = true
+                        type = 'D'
+                        balance = 1000
+                        creditDebt = 0
+                    card2:
+                        isValid = true
+                        type = 'C'
+                        balance = 2000
+                        creditDebt = 300
+                    card3:
+                        isValid = true
+                        type = 'C'
+                        balance = 3000
+                        creditDebt = 500
+                    card4:
+                        isValid = true
+                        type = 'D'
+                        balance = 4000
+                        creditDebt = 0
+                    card5:
+                        isValid = true
+                        type = 'C'
+                        balance = 5000
+                        creditDebt = 1000
+
+
+Data written in default_user.txt
+    User:
+        isRegistered = false
+        username = ""
+        password = ""
+        name = ""
+        age = 0
+        isAccompaniedByAdult = false
+        isLoggedIn = false
+        bankAccounts:
+            bankAccount1:
+                isValid = false
+                accountID = 0
+                bankName = ""
+                creditScore = 0
+                savingsAccountBalance = 0
+                cards:
+                    card1:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card2:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card3:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card4:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card5:
+                        isValid = true
+                        type = 'C'
+                        balance = 5000
+                        creditDebt = 1000
+            bankAccount2:
+                isValid = false
+                accountID = 0
+                bankName = ""
+                creditScore = 0
+                savingsAccountBalance = 0
+                cards:
+                    card1:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card2:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card3:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card4:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card5:
+                        isValid = true
+                        type = 'C'
+                        balance = 5000
+                        creditDebt = 1000
+            bankAccount3:
+                isValid = false
+                accountID = 0
+                bankName = ""
+                creditScore = 0
+                savingsAccountBalance = 0
+                cards:
+                    card1:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card2:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card3:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card4:
+                        isValid = false
+                        type = 'D'
+                        balance = 0
+                        creditDebt = 0
+                    card5:
+                        isValid = true
+                        type = 'C'
+                        balance = 5000
+                        creditDebt = 1000

@@ -31,5 +31,6 @@ void UserAccessBankAccount(User *user);
 void Logout(User *user);
 bool ChangePassword(User *user);
 bool ChangeUsername(User *user);
+User InitializeDefaultUser();
 
 #endif /* user_management_h */
