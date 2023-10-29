@@ -1,4 +1,4 @@
-# Personal Projects
+# Personal Projects <!-- Will no longer hold specific dates for projects, only MM/YYYY format. -->
 
 This repository is a list of all the small to medium sized personal projects I have done and are separated into the main language I used to create them. This main repository is meant to store all the projects I have done that are on the smaller side or are basic ideas taken from the internet while also directing people to my other bigger projects (that are yet to be made).
 
@@ -13,7 +13,7 @@ Before I made this repository, I didn't keep track of my projects (mainly just t
 
 ## Projects List
 ### [C](https://github.com/Dossr-NK/Personal-Projects/tree/main/C)
-  - [Bank Management System App](https://github.com/Dossr-NK/Personal-Projects/tree/main/C/Bank%20Management%20System%20App) (9/24/2023 - present)
+  - [Bank Management System App](https://github.com/Dossr-NK/Personal-Projects/tree/main/C/Bank%20Management%20System%20App) (09/2023 - 10/2023)
 ### [Java](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java)
   - [Calculator w/o a GUI](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Calculator%20no%20GUI)
   - [Tic Tac Toe](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Tic%20Tac%20Toe)
