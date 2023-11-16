@@ -1,29 +1,14 @@
 # Personal Projects <!-- Will no longer hold specific dates for projects, only MM/YYYY format. -->
+This repository serves as a main hub that lists all the projects I have done that can be seen on my github. It separates each project into the primary language that was used to create the project (in the future when I create projects that use multiple languages, I might rearrange this readme to sort by difficulty instead). 
 
-This repository is a list of all the small to medium sized personal projects I have done and are separated into the main language I used to create them. This main repository is meant to store all the projects I have done that are on the smaller side or are basic ideas taken from the internet while also directing people to my other bigger projects (that are yet to be made).
-
-- [Personal Projects](#personal-projects)
-  - [Project List](#projects-list)
-    - [C](#c)
-    - [Java](#java)
-  - [Contributing](#contributing)
-
-### Additional Note
-Before I made this repository, I didn't keep track of my projects (mainly just the first 2 java projects: [Calculator w/o a GUI](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Calculator%20no%20GUI) and [Tic Tac Toe](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Tic%20Tac%20Toe)) so there are no dates listed for these projects. After these projects, I will have dates for when I created them.
+- [Projects List](#projects-list)
+  - [C](#c)
+  - [Java](#java)
 
 ## Projects List
-### [C](https://github.com/Dossr-NK/Personal-Projects/tree/main/C)
+### C
   - [Bank Management System App](https://github.com/Dossr-NK/Personal-Projects/tree/main/C/Bank%20Management%20System%20App) (09/2023 - 10/2023)
-### [Java](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java)
-  - [Calculator w/o a GUI](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Calculator%20no%20GUI)
-  - [Tic Tac Toe](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Tic%20Tac%20Toe)
+### Java
+  - [Calculator w/o a GUI](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Calculator%20no%20GUI) (06/2022 - 07/2022)
+  - [Tic Tac Toe](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Tic%20Tac%20Toe) (08/2022 - 12/2022)
   <!-- - [Converter](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Converter) (9/28/2023 - present) -->
-
-<!-- Will add ## Larger Projects List later when I create one. -->
-
-## Contributing
-Although all of these projects will be on the smaller side, I still tend to make mistakes, miss things, or unknowningly(or knowingly) make bugs throughout my projects. Any help would be greate in either creating an issue if you find a bug or creating a pull request to fix a bug. The process of contributing are written under each project, although they are all the same or pretty similar. 
-
-
-## License
-All of the projects on this list are licensed under the [MIT License](https://github.com/Dossr-NK/Personal-Projects/blob/main/LICENSE.txt).
