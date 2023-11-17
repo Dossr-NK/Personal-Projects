@@ -10,7 +10,7 @@ This repository serves as a main hub that lists all the projects I have done tha
 ### C
   - [Bank Management System App](https://github.com/Dossr-NK/Bank-Management-System-App) (09/2023 - 10/2023)
 ### Java
-  - [Calculator w/o a GUI](https://github.com/Dossr-NK/CLI-Calculator) (06/2022 - 07/2022)
+  - [CLI Calculator](https://github.com/Dossr-NK/CLI-Calculator) (06/2022 - 07/2022)
   - [Tic Tac Toe](https://github.com/Dossr-NK/Tic-Tac-Toe) (08/2022 - 12/2022)
   <!-- - [Converter](https://github.com/Dossr-NK/Personal-Projects/tree/main/Java/Converter) (9/28/2023 - present) -->
 
